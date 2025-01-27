@@ -1,5 +1,31 @@
-## Developed live on twitch
-[ThePrimeagen](https://twitch.tv/ThePrimeagen)
+## What is the Big O?
+Always ask this question before you proceed.
+
+### Important Concepts
+1. Growth is with respect to the input
+2. Constants are dropped
+3. Worst case is usually the way we measure
+
+## Linear Search
+search(arr, v)
+a[0, ....n]
+
+Asky Character
+E = "E" 
+
+Worst Case: we go from 0 to n and never find "E"
+
+If our input goes from one to two we have to search double the space. 
+from two to four, double again that space. And it keeps growing equally with the array
+O(n) 
+As your input grows so does the time it takes equivalently. if it grows by 10 you get 10 cycles of this loop
+
+```
+npx jest Linear
+```
+
+
+
 
 ## Naming
 ### Lig-Machine
