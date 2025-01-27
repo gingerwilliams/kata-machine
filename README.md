@@ -24,6 +24,100 @@ As your input grows so does the time it takes equivalently. if it grows by 10 yo
 npx jest Linear
 ```
 
+## Binary Search
+Classic off by one problem that ever exitsts
+The Basis for other algorithms we will encounter
+
+### Important Concepts
+**Is it ordered?** If so you have advantages you can take with that data
+Lets say it is. How can we search this array?
+
+ordered array (ordered/sorted numbers)
+[0, ....n]
+
+[0, ..., xi = V?, ...n]
+we can jump 10% of n to Xi are you equal to my value? No?
+lets jump 10 more. Xi are you equal to my value? No? But youre now officially larger than V?
+I better walk back 10% and then linear seach my way through that.
+
+
+Worst Case: keep jumping 10% and never find it
+10 operations of jumping plus .1n
+(10 + 1n) ignore the constanst
+O(n)
+
+Instead of jumping 10%, Jump 50%, Xi are you equal to my value?
+If it is the value? yay done.
+Else we only have to check one half of the array
+Half it again
+
+N/2
+N/4
+N/8
+N/16
+(N/2^k) = 1
+N = 2^k
+
+logN amount of halving
+
+Log 4096 = 12 (halfed 12 times)
+
+### Important Concepts
+**Another BigO trick** If the input halves at each step, its likely O(LogN) of O(NlogN)
+
+```
+search(arr, needle, lo, hi)
+```
+
+loop until a condition happens
+when lo and hi become each other
+```
+[0, ....n]
+```
+
+midpoint = lo + (hi - lo)/2 Floor of this
+
+lo plus is to adjest where we are. offset
+
+### Important Concepts
+**[lo, hi )** lo is always inclusive, hi is always exclusive
+
+Value of the midpoint
+```
+V = arr[midpoint]
+```
+condition 1
+```
+if arr[midpoint] === needle
+    return true;
+```
+
+condition 2
+```
+else if arr[midpoint] > midpoint
+    adjust the low
+    low = midpoint + 1
+```
+
+else 
+```
+    hi = midpoint
+
+```
+
+exit condition
+```
+    do while lo < hi
+    return false
+```
+
+
+https://frontendmasters.com/courses/algorithms/pseudo-code-binary-search/
+https://www.geeksforgeeks.org/binary-search-in-javascript/
+
+
+
+
 
 
 
